@@ -16,8 +16,9 @@ void main() {
     printf(" Inserire i caratteri da scrivere: ");
 
     fp = myfopen(nomeFile, "w");
+    int i = 0;
     while ((c = getche()) != '\r') {
-        fputc(c, fp);
+        fprintf(fp, "%c", c);
     }
     myfclose(fp);
     printf("\n\n");
