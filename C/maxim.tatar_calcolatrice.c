@@ -21,8 +21,6 @@ int main() {
     int numeroUno;
     int numeroDue;
 
-    filePointer = myfopen("cronologia.txt", "a");
-
     printf("\n Calcolatrice - Salva Risultati in File");
 
     do {
@@ -47,7 +45,6 @@ int main() {
         system("cls");
 
         switch (scelta) {
-
             case 1: {
                 Addizione(numeroUno, numeroDue);
                 break;
@@ -77,17 +74,21 @@ int main() {
                 Radice(numeroUno);
                 break;
             }
+
             case 0: {
-                myfclose(filePointer);
                 printf(" Uscita in corso...\n");
                 break;
+            }
+
+            default: {
+                printf("\n Scelta non valida!");
             }
         }
 
         printf("\n Premi un tasto per continuare...");
         getch();
 
-    } while (scelta >= 1 && scelta <= 6);
+    } while (scelta != 0);
 }
 
 void Addizione(int a, int b) {
@@ -101,7 +102,10 @@ void Addizione(int a, int b) {
     scanf("%d", &b);
 
     printf("\n\n Risultato: %d + %d = %d\n", a, b, a + b);
+
+    filePointer = myfopen("cronologia.txt", "a");
     fprintf(filePointer, "%d + %d = %d\n", a, b, a + b);
+    myfclose(filePointer);
 }
 
 void Sottrazione(int a, int b) {
@@ -115,11 +119,15 @@ void Sottrazione(int a, int b) {
     scanf("%d", &b);
 
     printf("\n\n Risultato: %d - %d = %d\n", a, b, a - b);
+
+    filePointer = myfopen("cronologia.txt", "a");
     fprintf(filePointer, "%d - %d = %d\n", a, b, a - b);
+    myfclose(filePointer);
 }
 
 void Moltiplicazione(int a, int b) {
     printf("\n Calcolatrice - Moltiplicazione\n");
+    
     printf("\n Primo numero: ");
     scanf("%d", &a);
 
@@ -127,7 +135,10 @@ void Moltiplicazione(int a, int b) {
     scanf("%d", &b);
 
     printf("\n\n Risultato: %d * %d = %d\n", a, b, a * b);
+
+    filePointer = myfopen("cronologia.txt", "a");
     fprintf(filePointer, "%d * %d = %d\n", a, b, a * b);
+    myfclose(filePointer);
 }
 
 void Divisione(int a, int b) {
@@ -145,7 +156,10 @@ void Divisione(int a, int b) {
     }
 
     printf("\n\n Risultato: %d / %d = %.2f\n", a, b, (float)a / (float)b);
+
+    filePointer = myfopen("cronologia.txt", "a");
     fprintf(filePointer, "%d / %d = %.2f\n", a, b, (float)a / (float)b);
+    myfclose(filePointer);
 }
 
 void Potenza(int a, int b) {
@@ -158,7 +172,10 @@ void Potenza(int a, int b) {
     scanf("%d", &b);
 
     printf("\n\n Risultato: %d ^ %d = %.2f\n", a, b, pow(a, b));
+
+    filePointer = myfopen("cronologia.txt", "a");
     fprintf(filePointer, "%d ^ %d = %.2f\n", a, b, pow(a, b));
+    myfclose(filePointer);
 }
 
 void Radice(int a) {
@@ -173,7 +190,9 @@ void Radice(int a) {
     }
 
     printf("\n\n Risultato: radice quadrata di %d = %.2f\n", a, sqrt(a));
+    filePointer = myfopen("cronologia.txt", "a");
     fprintf(filePointer, "radice quadrata di %d = %.2f\n", a, sqrt(a));
+    myfclose(filePointer);
 }
 
 FILE *myfopen(char *name, char *mode) {
