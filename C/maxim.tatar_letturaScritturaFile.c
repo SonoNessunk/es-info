@@ -3,8 +3,8 @@
 #include <string.h>
 
 int copiafile(char[], char[]);
-FILE *myfopen(char *, char *);
-int myfclose(FILE *);
+FILE *MyFopen(char *, char *);
+int MyFclose(FILE *);
 
 #define OK 1
 #define ERROR 0
@@ -32,7 +32,7 @@ int copiafile(char fileCopia[], char fileIncolla[]) {
     FILE *fin;
     FILE *fout;
 
-    if ((fin = myfopen(fileCopia, "r")) == NULL) {
+    if ((fin = MyFopen(fileCopia, "r")) == NULL) {
         return ERROR;
     }
 
@@ -45,13 +45,13 @@ int copiafile(char fileCopia[], char fileIncolla[]) {
         fputs(line, fout);
     }
 
-    myfclose(fin);
-    myfclose(fout);
+    MyFclose(fin);
+    MyFclose(fout);
 
     return OK;
 }
 
-FILE *myfopen(char *name, char *mode) {
+FILE *MyFopen(char *name, char *mode) {
     FILE *file;
     file = fopen(name, mode);
 
@@ -63,7 +63,7 @@ FILE *myfopen(char *name, char *mode) {
     return file;
 }
 
-int myfclose(FILE *f) {
+int MyFclose(FILE *f) {
     int risultato;
 
     if (f == NULL) {

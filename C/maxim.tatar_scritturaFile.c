@@ -2,8 +2,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-FILE *myfopen(char *, char *);
-int myfclose(FILE *);
+FILE *MyFopen(char *, char *);
+int MyFclose(FILE *);
 
 void main() {
     FILE *fp;
@@ -15,16 +15,16 @@ void main() {
     scanf("%s", nomeFile);
     printf(" Inserire i caratteri da scrivere: ");
 
-    fp = myfopen(nomeFile, "w");
+    fp = MyFopen(nomeFile, "w");
     int i = 0;
     while ((c = getche()) != '\r') {
         fprintf(fp, "%c", c);
     }
-    myfclose(fp);
+    MyFclose(fp);
     printf("\n\n");
 }
 
-FILE *myfopen(char *name, char *mode) {
+FILE *MyFopen(char *name, char *mode) {
     FILE *file;
     file = fopen(name, mode);
     if (file == NULL) {
@@ -34,7 +34,7 @@ FILE *myfopen(char *name, char *mode) {
     return file;
 }
 
-int myfclose(FILE *f) {
+int MyFclose(FILE *f) {
     int risultato;
     if (f == NULL) {
         printf(" ERRORE INTERNO \n");

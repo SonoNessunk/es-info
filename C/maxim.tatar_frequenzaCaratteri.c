@@ -2,8 +2,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-FILE *myfopen(char *name, char *mode);
-int myfclose(FILE *f);
+FILE *MyFopen(char *name, char *mode);
+int MyFclose(FILE *f);
 
 void main(int argc, char *argv[]) {
     const int LETT = 26;
@@ -17,7 +17,7 @@ void main(int argc, char *argv[]) {
     for (i = 0; i < LETT; i++)
         freq[i] = 0;
 
-    f = myfopen(argv[1], "r");
+    f = MyFopen(argv[1], "r");
     ch = fgetc(f);
     while (ch != EOF) {
         if (isalpha(ch)) {
@@ -26,7 +26,7 @@ void main(int argc, char *argv[]) {
         }
         ch = fgetc(f);
     }
-    myfclose(f);
+    MyFclose(f);
     for (i = 0; i < LETT; i++) {
         printf("%c : %d\n", i + 'A', freq[i]);
     }
@@ -34,7 +34,7 @@ void main(int argc, char *argv[]) {
     printf("\n\n");
 }
 
-FILE *myfopen(char *name, char *mode) {
+FILE *MyFopen(char *name, char *mode) {
     FILE *file;
     file = fopen(name, mode);
     if (file == NULL) {
@@ -44,7 +44,7 @@ FILE *myfopen(char *name, char *mode) {
     return file;
 }
 
-int myfclose(FILE *f) {
+int MyFclose(FILE *f) {
     int risultato;
     if (f == NULL) {
         printf(" ERRORE INTERNO \n");

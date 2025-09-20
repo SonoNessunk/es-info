@@ -2,8 +2,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-FILE *myfopen(char *name, char *mode);
-int myfclose(FILE *f);
+FILE *MyFopen(char *name, char *mode);
+int MyFclose(FILE *f);
 
 int main(int argc, char *argv[]) {
 
@@ -14,7 +14,7 @@ int main(int argc, char *argv[]) {
         printf("Numero argomenti errato\n");
         exit(1);
     }
-    f = myfopen(argv[1], "w");
+    f = MyFopen(argv[1], "w");
 
     printf("\n\n");
     for (i = 0; i < 26; i++) {
@@ -24,12 +24,12 @@ int main(int argc, char *argv[]) {
         }
         fputc('\n', f);
     }
-    myfclose(f);
+    MyFclose(f);
     exit(0);
     return 0;
 }
 
-FILE *myfopen(char *name, char *mode) {
+FILE *MyFopen(char *name, char *mode) {
     FILE *file;
     file = fopen(name, mode);
     if (file == NULL) {
@@ -39,7 +39,7 @@ FILE *myfopen(char *name, char *mode) {
     return file;
 }
 
-int myfclose(FILE *f) {
+int MyFclose(FILE *f) {
     int risultato;
     if (f == NULL) {
         printf(" ERRORE INTERNO \n");

@@ -2,8 +2,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-FILE *myfopen(char *name, char *mode);
-int myfclose(FILE *f);
+FILE *MyFopen(char *name, char *mode);
+int MyFclose(FILE *f);
 
 void main() {
     char car;
@@ -15,7 +15,7 @@ void main() {
     scanf("%s", nomeFile);
     printf(" Contenuto del file \"%s\":\n\n ", nomeFile);
 
-    fp = myfopen(nomeFile, "r");
+    fp = MyFopen(nomeFile, "r");
     while (!feof(fp)) {
         car = fgetc(fp);
         printf("%c", car);
@@ -23,12 +23,12 @@ void main() {
             printf(" ");
         }
     }
-    myfclose(fp);
+    MyFclose(fp);
 
     printf("\n\n");
 }
 
-FILE *myfopen(char *name, char *mode) {
+FILE *MyFopen(char *name, char *mode) {
     FILE *file;
     file = fopen(name, mode);
     if (file == NULL) {
@@ -38,7 +38,7 @@ FILE *myfopen(char *name, char *mode) {
     return file;
 }
 
-int myfclose(FILE *f) {
+int MyFclose(FILE *f) {
     int risultato;
     if (f == NULL) {
         printf(" ERRORE INTERNO \n");
