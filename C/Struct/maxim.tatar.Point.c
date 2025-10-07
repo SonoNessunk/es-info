@@ -11,7 +11,7 @@ typedef struct point Point;
 Point leggiPunto();
 double distanzaDaOrigine(Point);
 double distanzaTraPunti(Point, Point);
-int qudrante(Point);
+int quadrante(Point);
 int sonoAllineati(Point, Point, Point);
 int insterseca(Point, Point);
 
@@ -61,9 +61,9 @@ void main() {
             }
 
             case 3: {
-                printf("\n Quadrante del Punto 1: %d", qudrante(punto1));
-                printf("\n Quadrante del Punto 2: %d", qudrante(punto2));
-                printf("\n Quadrante del Punto 3: %d", qudrante(punto3));
+                printf("\n Quadrante del Punto 1: %d", quadrante(punto1));
+                printf("\n Quadrante del Punto 2: %d", quadrante(punto2));
+                printf("\n Quadrante del Punto 3: %d", quadrante(punto3));
                 break;
             }
 
@@ -137,7 +137,7 @@ double distanzaTraPunti(Point p1, Point p2) {
     return sqrt(pow(p1.x - p2.x, 2) + pow(p1.y - p2.y, 2));
 }
 
-int qudrante(Point p) {
+int quadrante(Point p) {
 
     if (p.x >= 0 && p.y >= 0) {
         return 1;
@@ -176,7 +176,7 @@ int sonoAllineati(Point p1, Point p2, Point p3) {
 int insterseca(Point p1, Point p2) {
     int result;
 
-    if (qudrante(p1) == qudrante(p2)) {
+    if (quadrante(p1) == quadrante(p2)) {
         result = 0;
     } else {
         result = 1;
