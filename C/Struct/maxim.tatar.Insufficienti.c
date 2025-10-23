@@ -11,7 +11,7 @@ typedef struct studente {
 
 STUDENTE leggiStudente();
 void popola(STUDENTE[], int);
-int contaInsufficienti(STUDENTE[], int);
+int cercaStudente(STUDENTE[], int);
 void stampa(STUDENTE[], int);
 
 void main() {
@@ -23,7 +23,7 @@ void main() {
 
     stampa(listaStudenti, NUMERO_STUDENTI);
 
-    printf("\n Il numero di insufficienti e': %d\n", contaInsufficienti(listaStudenti, NUMERO_STUDENTI));
+    printf("\n Il numero di insufficienti e': %d\n", cercaStudente(listaStudenti, NUMERO_STUDENTI));
 }
 
 STUDENTE leggiStudente() {
@@ -52,7 +52,7 @@ void popola(STUDENTE studenti[], int numeroStudenti) {
     }
 }
 
-int contaInsufficienti(STUDENTE studente[], int numeroStudenti) {
+int cercaStudente(STUDENTE studente[], int numeroStudenti) {
     int i;
     int insufficienti = 0;
 
