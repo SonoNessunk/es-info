@@ -5,31 +5,35 @@
 using namespace std;
 
 void Elettrodomestico::set_potenza(float Potenza) {
-  potenza = Potenza;
+    potenza = Potenza;
 }
 void Elettrodomestico::set_oreUtilizzo(float OreUtilizzo) {
-  oreUtilizzo = OreUtilizzo;
+    oreUtilizzo = OreUtilizzo;
 }
 
 float Elettrodomestico::get_potenza() {
-  return potenza;
+    return potenza;
 }
 float Elettrodomestico::get_oreUtilizzo() {
-  return oreUtilizzo;
+    return oreUtilizzo;
 }
 
 float Elettrodomestico::calcolaConsumo() {
-  return potenza * oreUtilizzo;
+    return potenza * oreUtilizzo;
 }
 
 Elettrodomestico::Elettrodomestico(float Potenza, float OreUtilizzo) {
 
-  potenza = Potenza;
-  oreUtilizzo = OreUtilizzo;
+    potenza = Potenza;
+    oreUtilizzo = OreUtilizzo;
 
-  cout << " Oggetto PARENT allocato" << endl;
+    cout << endl << " + Oggetto PARENT allocato" << endl;
+}
+
+Elettrodomestico::Elettrodomestico() {
+    cout << endl << " + Oggetto PARENT allocato" << endl;
 }
 
 Elettrodomestico::~Elettrodomestico() {
-  cout << " Oggetto PARENT distrutto" << endl;
+    cout << endl << " - Oggetto PARENT distrutto" << endl;
 }

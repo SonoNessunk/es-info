@@ -2,21 +2,22 @@
 #define ELETTRODOMESTICO_H
 
 class Elettrodomestico {
-protected:
-  float potenza;
-  float oreUtilizzo;
+  protected:
+    float potenza;
+    float oreUtilizzo;
 
-public:
-  void set_potenza(float Potenza);
-  void set_oreUtilizzo(float OreUtilizzo);
+  public:
+    void set_potenza(float Potenza);
+    void set_oreUtilizzo(float OreUtilizzo);
 
-  float get_potenza();
-  float get_oreUtilizzo();
+    float get_potenza();
+    float get_oreUtilizzo();
 
-  float calcolaConsumo();
+    float calcolaConsumo();
 
-  Elettrodomestico(float Potenza, float OreUtilizzo);
-  ~Elettrodomestico();
+    Elettrodomestico(float Potenza, float OreUtilizzo);
+    Elettrodomestico();
+    ~Elettrodomestico();
 };
 
 #endif
