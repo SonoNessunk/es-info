@@ -4,7 +4,6 @@
 int main(int argc, char **argv) {
     Televisore tv = Televisore();
     int scelta;
-    int canale;
 
     do {
         system("cls");
@@ -29,7 +28,8 @@ int main(int argc, char **argv) {
                 break;
             }
             case 2: {
-                cout << " Canale da impostare: ";
+                int canale;
+                cout << " Canale da impostare (0-99): ";
                 cin >> canale;
                 tv.ImpostaCanale(canale);
                 break;
