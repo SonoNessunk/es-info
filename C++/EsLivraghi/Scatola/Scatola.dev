@@ -1,6 +1,6 @@
 [Project]
-FileName=Televisore.dev
-Name=Televisore
+FileName=Scatola.dev
+Name=Scatola
 Type=1
 Ver=2
 ObjFiles=
@@ -61,7 +61,7 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit2]
-FileName=Televisore.h
+FileName=Scatola.h
 CompileCpp=1
 Folder=
 Compile=1
@@ -71,7 +71,7 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit3]
-FileName=Televisore.cpp
+FileName=Scatola.cpp
 CompileCpp=1
 Folder=
 Compile=1
