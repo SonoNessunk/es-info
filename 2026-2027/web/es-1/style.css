@@ -1,0 +1,16 @@
+body {
+    font-family: Arial;
+    background-color: blue;
+    color: white;
+}
+
+.label-form {
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+.input-text,
+.input-button {
+    border: 2px solid black;
+    background-color: lightgray;
+}
