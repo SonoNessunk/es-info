@@ -1,0 +1,26 @@
+.card-prodotto {
+    width: 300px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px gray;
+}
+
+.prezzo {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: red;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.btn-compra {
+    width: 100%;
+    background-color: royalblue;
+    color: white;
+    border: none;
+}
+
+.btn-compra:hover {
+    background-color: blue;
+    cursor: pointer;
+}
