@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="it">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Esercitazione</title>
+
+        <link rel="stylesheet" href="style.css" />
+    </head>
+
+    <body>
+        <div class="container">
+            <header class="header">
+                <h1 class="title">Tech Conference 2026</h1>
+                <h2>
+                    La conferenza annuale di riferimento per sviluppatori e
+                    innovatori digitali
+                </h2>
+            </header>
+
+            <section class="info-section">
+                <p>
+                    Benvenuti alla pagina ufficiale di pre-iscrizione. Partecipa
+                    agli interventi tenuti da esperti del settore e scopri le
+                    novità tecnologiche del futuro. Gli argomenti chiave di
+                    questa edizione saranno:
+                </p>
+                <ul>
+                    <li>
+                        Intelligenza Artificiale applicata allo Sviluppo Web
+                    </li>
+                    <li>
+                        Architetture Frontend Moderne e Ottimizzazione delle
+                        Prestazioni
+                    </li>
+                    <li>Cybersecurity e Protezione dei Dati nell'era Cloud</li>
+                </ul>
+            </section>
+
+            <section class="form-section">
+                <form action="conferma.html" method="POST">
+                    <fieldset class="fieldset-block">
+                        <legend>Dati Anagrafici</legend>
+
+                        <div class="form-group">
+                            <label for="nome" class="form-label"
+                                >Nome e Cognome *</label
+                            >
+                            <input
+                                type="text"
+                                id="nome"
+                                name="nome"
+                                class="input-field"
+                                placeholder="Mario Rossi"
+                                required
+                            />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email" class="form-label"
+                                >Email *</label
+                            >
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                class="input-field"
+                                placeholder="mario.rossi@example.com"
+                                required
+                            />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="telefono" class="form-label"
+                                >Telefono</label
+                            >
+                            <input
+                                type="tel"
+                                id="telefono"
+                                name="telefono"
+                                class="input-field"
+                                placeholder="+39 333 1234567"
+                            />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="anno_nascita" class="form-label"
+                                >Anno di Nascita</label
+                            >
+                            <input
+                                type="number"
+                                id="anno_nascita"
+                                name="anno_nascita"
+                                class="input-field"
+                                min="1940"
+                                max="2010"
+                                placeholder="2000"
+                            />
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="fieldset-block">
+                        <legend>Dettagli Partecipazione</legend>
+
+                        <div class="form-group">
+                            <label class="form-label">Tipo Biglietto *</label>
+                            <div class="option-group">
+                                <label
+                                    ><input
+                                        type="radio"
+                                        name="biglietto"
+                                        value="student"
+                                        required
+                                    />
+                                    Student</label
+                                >
+                                <label
+                                    ><input
+                                        type="radio"
+                                        name="biglietto"
+                                        value="standard"
+                                    />
+                                    Standard</label
+                                >
+                                <label
+                                    ><input
+                                        type="radio"
+                                        name="biglietto"
+                                        value="vip"
+                                    />
+                                    VIP</label
+                                >
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label"
+                                >Sessioni di Interesse</label
+                            >
+                            <div class="option-group">
+                                <label
+                                    ><input
+                                        type="checkbox"
+                                        name="sessioni"
+                                        value="ai"
+                                    />
+                                    AI & Web</label
+                                >
+                                <label
+                                    ><input
+                                        type="checkbox"
+                                        name="sessioni"
+                                        value="frontend"
+                                    />
+                                    Frontend & Performance</label
+                                >
+                                <label
+                                    ><input
+                                        type="checkbox"
+                                        name="sessioni"
+                                        value="security"
+                                    />
+                                    Cybersecurity</label
+                                >
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="tshirt" class="form-label"
+                                >Taglia T-Shirt</label
+                            >
+                            <select
+                                id="tshirt"
+                                name="tshirt"
+                                class="input-field"
+                            >
+                                <option value="S">S</option>
+                                <option value="M" selected>M</option>
+                                <option value="L">L</option>
+                                <option value="XL">XL</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="note" class="form-label"
+                                >Note / Richieste Particolari</label
+                            >
+                            <textarea
+                                id="note"
+                                name="note"
+                                class="input-field"
+                                rows="4"
+                                placeholder="Inserisci eventuali allergie, esigenze di accessibilità o domande..."
+                            ></textarea>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="fieldset-block">
+                        <legend>Consesi e Invio</legend>
+
+                        <div class="form-group">
+                            <label>
+                                <input
+                                    type="checkbox"
+                                    name="privacy"
+                                    required
+                                />
+                                Accetto i termini della Privacy Policy *
+                            </label>
+                        </div>
+
+                        <div class="button-group">
+                            <button type="submit" class="btn btn-submit">
+                                Invia Pre-iscrizione
+                            </button>
+                            <button type="reset" class="btn btn-reset">
+                                Azzera Campi
+                            </button>
+                        </div>
+                    </fieldset>
+                </form>
+            </section>
+        </div>
+    </body>
+</html>
