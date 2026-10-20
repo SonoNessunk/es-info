@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="it">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Maxim Tatar | verifica 20.10.26</title>
+
+        <link rel="stylesheet" href="./stile-palestra.css" />
+    </head>
+
+    <body>
+        <div class="container">
+            <header class="header">
+                <h1 class="title">FITLIFE CLUB 2026</h1>
+                <h2 class="subtitle">Prenota la tua Lezione di Prova Gratuita</h2>
+            </header>
+
+            <section class="info-section">
+                <p>Benvenuti in FitLife Club! Compila il modulo sottostante per richiedere il tuo pass gratuito valido per un giorno intero.</p>
+                <ul>
+                    <li>Accesso completo alla Sala Pesi e Cardio</li>
+                    <li>Consulenza personalizzata con un Personal Trainer</li>
+                    <li>Partecipazione a un corso di gruppo a scelta</li>
+                </ul>
+            </section>
+
+            <section class="form-section">
+                <form action="conferma.html" method="POST">
+                    <fieldset class="fieldset-block">
+                        <legend class="legend-title">Dati Personali</legend>
+
+                        <div class="form-group">
+                            <label for="nome" class="form-label">Nome e Cognome *</label>
+                            <input type="text" id="nome" name="nome" class="input-field" placeholder="Mario Rossi" required />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email" class="form-label">Indirizzo Email *</label>
+                            <input type="email" id="email" name="email" class="input-field" placeholder="mario.rossi@email.com" required />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="telefono" class="form-label">Telefono</label>
+                            <input type="tel" id="telefono" name="telefono" class="input-field" placeholder="3331234567" />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="eta" class="form-label">Età</label>
+                            <input type="number" id="eta" name="eta" class="input-field" min="16" max="80" placeholder="25" />
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="fieldset-block">
+                        <legend class="legend-title">Scelta Corso e Dettagli</legend>
+
+                        <div class="form-group">
+                            <label class="form-label">Tipolgia Abbonameto Preferito</label>
+                            <div class="option-group">
+                                <label><input type="radio" name="abbonamento" value="mensile" required /> Mensile</label>
+                                <label><input type="radio" name="abbonamento" value="trimestrale" /> Trimestrale</label>
+                                <label><input type="radio" name="abbonamento" value="annuale" /> Annuale</label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Corsi di Interesse</label>
+                            <div class="option-group">
+                                <label><input type="checkbox" name="corsi" value="sala_pesi" /> Sala pesi</label>
+                                <label><input type="checkbox" name="corsi" value="fitness_crossfit" /> Fitness/Crossfit</label>
+                                <label><input type="checkbox" name="corsi" value="pilates" /> Pilates</label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="fascia-oraria" class="form-label">Fascia Oraria Preferita</label>
+                            <select id="fascia-oraria" name="fascia-oraria" class="input-field">
+                                <option value="mattina">Mattina (8:00 - 12:00)</option>
+                                <option value="pomeriggio" selected>Pomeriggio (14:00 - 18:00)</option>
+                                <option value="sera">Sera (18:00 - 23:00)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="note" class="form-label">Note / Esigenze Mediche</label>
+                            <textarea id="note" name="note" class="input-field" rows="4" placeholder="Indica eventuali allergie, infortuni, o richieste particolari..."></textarea>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="fieldset-block">
+                        <legend class="legend-title">Consensi e Invio</legend>
+
+                        <div class="form-group">
+                            <label>
+                                <input type="checkbox" name="regolamento" required />
+                                Accetto il regolamento interno della palestra *
+                            </label>
+                        </div>
+
+                        <div class="button-group">
+                            <button type="submit" class="btn btn-submit">Richiedi Pass Gratuito</button>
+                            <button type="reset" class="btn btn-reset">Azzera Campi</button>
+                        </div>
+                    </fieldset>
+                </form>
+            </section>
+        </div>
+    </body>
+</html>
