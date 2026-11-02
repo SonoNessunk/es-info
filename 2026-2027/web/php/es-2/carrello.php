@@ -10,6 +10,7 @@ $totaleGenerale = 0;
 
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -48,7 +49,8 @@ $totaleGenerale = 0;
             margin-top: 20px;
         }
 
-        th, td {
+        th,
+        td {
             text-align: left;
             padding: 12px 14px;
             border-bottom: 1px solid #e2e8f0;
@@ -71,6 +73,7 @@ $totaleGenerale = 0;
         }
     </style>
 </head>
+
 <body>
 
     <div class="cart-container">
@@ -83,11 +86,11 @@ $totaleGenerale = 0;
                 <th class="text-right">Prezzo Unitario</th>
                 <th class="text-right">Subtotale</th>
             </tr>
-    
-            <?php 
+
+            <?php
             foreach ($carrello as $prodotto) {
                 $subtotale = $prodotto["prezzo"] * $prodotto["quantita"];
-                
+
                 $totaleGenerale += $subtotale;
             ?>
                 <tr>
@@ -96,10 +99,10 @@ $totaleGenerale = 0;
                     <td class="text-right">€ <?php echo number_format($prodotto["prezzo"], 2, ',', '.'); ?></td>
                     <td class="text-right">€ <?php echo number_format($subtotale, 2, ',', '.'); ?></td>
                 </tr>
-            <?php 
-            } 
+            <?php
+            }
             ?>
-    
+
             <tr class="total-row">
                 <td colspan="3" class="text-right">Totale Ordine:</td>
                 <td class="text-right">€ <?php echo number_format($totaleGenerale, 2, ',', '.'); ?></td>
@@ -108,4 +111,5 @@ $totaleGenerale = 0;
     </div>
 
 </body>
+
 </html>
